@@ -1,0 +1,20 @@
+# Mac / macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Editors / IDEs
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# Logs
+*.log
