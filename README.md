@@ -33,7 +33,7 @@ brew install mirageglobe/tap/scout
 
 | formula | version | description                             | source                                          |
 | ------- | ------- | --------------------------------------- | ----------------------------------------------- |
-| scout   | 0.3.0   | terminal-native dual-pane file explorer | [github](https://github.com/mirageglobe/scout)  |
+| scout   | 0.4.0   | terminal-native dual-pane file explorer | [github](https://github.com/mirageglobe/scout)  |
 
 ## adding a new formula
 
