@@ -5,21 +5,21 @@
 class Scout < Formula
   desc "terminal-native dual-pane file explorer"
   homepage "https://github.com/mirageglobe/scout"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mirageglobe/scout/releases/download/v0.3.0/scout_0.3.0_darwin_amd64.tar.gz"
-      sha256 "2514317a7219fe297e13859337a741f48cded3688e3fe2982d7bc9b155d66af4"
+      url "https://github.com/mirageglobe/scout/releases/download/v0.4.0/scout_0.4.0_darwin_amd64.tar.gz"
+      sha256 "62e0ca7dafd4b7b36710192cbf894c136eb216b0bda6f1f88d5e167484703aea"
 
       define_method(:install) do
         bin.install "scout"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mirageglobe/scout/releases/download/v0.3.0/scout_0.3.0_darwin_arm64.tar.gz"
-      sha256 "202f6434962bb93d517d7a785313791a63301666755eba26383bea88544389b5"
+      url "https://github.com/mirageglobe/scout/releases/download/v0.4.0/scout_0.4.0_darwin_arm64.tar.gz"
+      sha256 "b64cd7bff5ab635b67e692dafbb4f4099224623ff0551d6366b82f72df2b2dca"
 
       define_method(:install) do
         bin.install "scout"
@@ -29,8 +29,8 @@ class Scout < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mirageglobe/scout/releases/download/v0.3.0/scout_0.3.0_linux_amd64.tar.gz"
-      sha256 "8588c6681eabc34cf6d5761816319100dd9d7d65a9be54842aaa1707d5acdb45"
+      url "https://github.com/mirageglobe/scout/releases/download/v0.4.0/scout_0.4.0_linux_amd64.tar.gz"
+      sha256 "167a4c601aaa3ff8e8e3a9f5596b0d94dc995c1a69f4959cf65c98b20ae4593d"
       define_method(:install) do
         bin.install "scout"
       end
