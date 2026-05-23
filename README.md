@@ -1,28 +1,43 @@
 # homebrew-tap
 
-homebrew tap for [mirageglobe/ai-inari](https://github.com/mirageglobe/ai-inari).
+homebrew tap for tools published by [mirageglobe](https://github.com/mirageglobe).
 
-## install
+## requirements
+
+- macOS (arm64 or x86_64) or Linux (x86_64)
+- [homebrew](https://brew.sh) installed
+
+## available formulae
+
+| formula | version | description                                  | source                                             |
+| :---    | :---    | :---                                         | :---                                               |
+| inari   | 0.2.0   | security-first local AI orchestrator and TUI | [github](https://github.com/mirageglobe/ai-inari)  |
+| scout   | 0.8.0   | terminal-native dual-pane file explorer      | [github](https://github.com/mirageglobe/scout)     |
+
+## usage
 
 ```sh
+# add this tap (one-time setup)
 brew tap mirageglobe/tap
+
+# install a formula
 brew install mirageglobe/tap/inari
-```
 
-or in one step:
+# upgrade all installed formulae
+brew upgrade
 
-```sh
-brew install mirageglobe/tap/inari
-```
-
-## upgrade
-
-```sh
-brew upgrade mirageglobe/tap/inari
-```
-
-## uninstall
-
-```sh
+# uninstall a formula
 brew uninstall mirageglobe/tap/inari
 ```
+
+## adding a new formula
+
+1. build and publish a github release with cross-compiled binaries and sha256 checksums.
+2. add `Formula/<name>.rb` (use `Formula/scout.rb` as a reference).
+3. set the correct `url` and `sha256` for each platform target (macOS arm64, macOS amd64, Linux amd64).
+4. run `brew audit --new Formula/<name>.rb` locally before committing.
+5. commit and push — the tap updates immediately.
+
+## agent context
+
+see [AGENT.md](AGENT.md) for ai assistant guidelines specific to this repository.
