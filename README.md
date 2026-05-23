@@ -31,9 +31,23 @@ brew install mirageglobe/tap/scout
 
 ## available formulae
 
-| formula | version | description                             | source                                          |
-| ------- | ------- | --------------------------------------- | ----------------------------------------------- |
-| scout   | 0.4.0   | terminal-native dual-pane file explorer | [github](https://github.com/mirageglobe/scout)  |
+| formula | version | description                                   | source                                              |
+| :---    | :---    | :---                                          | :---                                                |
+| inari   | 0.2.0   | security-first local AI orchestrator and TUI  | [github](https://github.com/mirageglobe/ai-inari)   |
+| scout   | 0.8.0   | terminal-native dual-pane file explorer       | [github](https://github.com/mirageglobe/scout)      |
+
+## install
+
+```sh
+# add this tap (one-time setup)
+brew tap mirageglobe/tap
+
+# inari — local AI orchestrator and TUI
+brew install mirageglobe/tap/inari
+
+# scout — dual-pane file explorer
+brew install mirageglobe/tap/scout
+```
 
 ## adding a new formula
 
