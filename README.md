@@ -1,62 +1,28 @@
 # homebrew-tap
 
-homebrew tap for tools published by [mirageglobe](https://github.com/mirageglobe).
-
-## requirements
-
-- macOS (arm64 or x86_64) or Linux (x86_64)
-- [homebrew](https://brew.sh) installed
-
-## usage
-
-```bash
-# add this tap (one-time setup)
-brew tap mirageglobe/tap
-
-# install a formula
-brew install mirageglobe/tap/scout
-
-# upgrade all installed formulae
-brew upgrade
-
-# uninstall a formula
-brew uninstall mirageglobe/tap/scout
-```
-
-you can also install directly without adding the tap first:
-
-```bash
-brew install mirageglobe/tap/scout
-```
-
-## available formulae
-
-| formula | version | description                                   | source                                              |
-| :---    | :---    | :---                                          | :---                                                |
-| inari   | 0.2.0   | security-first local AI orchestrator and TUI  | [github](https://github.com/mirageglobe/ai-inari)   |
-| scout   | 0.8.0   | terminal-native dual-pane file explorer       | [github](https://github.com/mirageglobe/scout)      |
+homebrew tap for [mirageglobe/ai-inari](https://github.com/mirageglobe/ai-inari).
 
 ## install
 
 ```sh
-# add this tap (one-time setup)
 brew tap mirageglobe/tap
-
-# inari — local AI orchestrator and TUI
 brew install mirageglobe/tap/inari
-
-# scout — dual-pane file explorer
-brew install mirageglobe/tap/scout
 ```
 
-## adding a new formula
+or in one step:
 
-1. build and publish a github release with cross-compiled binaries and sha256 checksums.
-2. add `Formula/<name>.rb` (use `Formula/scout.rb` as a reference).
-3. set the correct `url` and `sha256` for each platform target (macOS arm64, macOS amd64, Linux amd64).
-4. run `brew audit --new Formula/<name>.rb` locally before committing.
-5. commit and push — the tap updates immediately.
+```sh
+brew install mirageglobe/tap/inari
+```
 
-## agent context
+## upgrade
 
-see [AGENT.md](AGENT.md) for ai assistant guidelines specific to this repository.
+```sh
+brew upgrade mirageglobe/tap/inari
+```
+
+## uninstall
+
+```sh
+brew uninstall mirageglobe/tap/inari
+```
