@@ -5,7 +5,7 @@ class Scout < Formula
   desc "terminal-native dual-pane file explorer"
   homepage "https://github.com/mirageglobe/scout"
   version "0.8.0"
-  license "Apache-2.0"
+  license "BUSL-1.1"
 
   on_macos do
     if Hardware::CPU.intel?
