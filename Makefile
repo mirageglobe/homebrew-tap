@@ -23,6 +23,11 @@ update:			## update formula: make update FORMULA=scout VERSION=0.7.0 [REPO=scout
 	SHA_DARWIN_AMD64=$$(echo "$$CHECKSUMS" | awk '/darwin_amd64\.tar\.gz/ {print $$1}')
 	SHA_DARWIN_ARM64=$$(echo "$$CHECKSUMS" | awk '/darwin_arm64\.tar\.gz/ {print $$1}')
 	SHA_LINUX_AMD64=$$(echo "$$CHECKSUMS"  | awk '/linux_amd64\.tar\.gz/  {print $$1}')
+	# guard: abort if any expected checksum is missing, otherwise the sed below
+	# would patch sha256 "" and we would push a broken formula
+	for pair in "darwin_amd64:$$SHA_DARWIN_AMD64" "darwin_arm64:$$SHA_DARWIN_ARM64" "linux_amd64:$$SHA_LINUX_AMD64"; do
+		if [ -z "$${pair#*:}" ]; then echo "missing checksum for $${pair%%:*} in release assets; aborting"; exit 1; fi
+	done
 	FORMULA_FILE="Formula/$(FORMULA).rb"
 	if [ ! -f "$$FORMULA_FILE" ]; then echo "formula not found: $$FORMULA_FILE"; exit 1; fi
 	sed -i '' \
