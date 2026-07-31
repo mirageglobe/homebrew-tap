@@ -9,10 +9,10 @@ homebrew tap for tools published by [mirageglobe](https://github.com/mirageglobe
 
 ## available formulae
 
-| formula | version | description                                  | source                                             |
-| :---    | :---    | :---                                         | :---                                               |
-| inari   | 0.2.0   | security-first local AI orchestrator and TUI | [github](https://github.com/mirageglobe/ai-inari)  |
-| scout   | 0.8.0   | terminal-native dual-pane file explorer      | [github](https://github.com/mirageglobe/scout)     |
+| formula | version | description                                  | source                                         |
+| :---    | :---    | :---                                         | :---                                           |
+| inari   | 0.2.0   | security-first local AI orchestrator and TUI | [github](https://github.com/mirageglobe/inari) |
+| scout   | 0.8.0   | terminal-native dual-pane file explorer      | [github](https://github.com/mirageglobe/scout) |
 
 ## usage
 
